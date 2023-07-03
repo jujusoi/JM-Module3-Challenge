@@ -1,13 +1,7 @@
-
 var capLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 var specialCharacters = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "+", "=", "_", "`", "~"]
-
-console.log(letters);
-console.log(numbers);
-console.log(specialCharacters);
-console.log(capLetters);
 
 var generateBtn = document.querySelector("#generate");
 
@@ -29,24 +23,20 @@ function writePassword() {
     } else { lowercase();
       function lowercase() {
       if (window.confirm("Do you want lowercase characters in your password?")) {
-        console.log("i want lowercase")
         wantLowercase = true;
         uppercase();
         return wantLowercase;
       } else {
-        console.log("i dont want lowercase")
         wantLowercase = false;
         uppercase();
         return wantLowercase;
       }
       function uppercase() {
         if (window.confirm("Do you want uppercase characters in your password?")) {
-          console.log("i want uppercase")
           wantUppercase = true;
           getNumbers();
           return wantUppercase;
         } else {
-          console.log("i dont want uppercase")
           wantUppercase = false;
           getNumbers();
           return wantUppercase;
@@ -54,12 +44,10 @@ function writePassword() {
       }
       function getNumbers() {
         if (window.confirm("Do you want numbers in your password?")) {
-          console.log("i want numbers")
           wantNumbers = true;
           iWantSpecialCharacters();
           return wantNumbers;
         } else {
-          console.log("i dont want numbers")
           wantNumbers = false;
           iWantSpecialCharacters();
           return wantNumbers;
@@ -67,22 +55,16 @@ function writePassword() {
       }
       function iWantSpecialCharacters() {
         if (window.confirm("Do you want special characters in your password?")) {
-          console.log("i want special characters")
           wantSpecialChars = true;
           generatePasswordAll();
           return wantSpecialChars
         } else {
-          console.log("i dont want special characters")
           wantSpecialChars = false;
           generatePasswordAll();
           return wantSpecialChars;
         }
       }
       function generatePasswordAll() {
-        console.log(wantLowercase);
-        console.log(wantUppercase);
-        console.log(wantNumbers);
-        console.log(wantSpecialChars);
         var newPassword = "";
         if (wantLowercase === false && wantUppercase === false && wantNumbers === false && wantSpecialChars === false) {
           newPassword = "";
@@ -122,19 +104,15 @@ function writePassword() {
 
 function makePassFromLogic(newPassword) {
   var shuffledPassword = newPassword.sort(() => 0.5 - Math.random());
-  console.log(shuffledPassword);
   var spliceValue = shuffledPassword.length - passWordLength
   var finalPassword = shuffledPassword.splice(spliceValue);
-  console.log(finalPassword);
   var stringPass = finalPassword.toString();
   var splitComma = stringPass.replaceAll(",", "");
-  console.log(splitComma);
   displayPassword(splitComma);
 }
 
       function displayPassword(examplePass) {
         var textArea = document.body.querySelector("#password");
-        console.log(textArea);
         textArea.value = examplePass;
       }
       }
@@ -144,11 +122,6 @@ function makePassFromLogic(newPassword) {
  }
  }  else { return
  }
-
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-  passwordText.value = password;
-
 }
 
 generateBtn.addEventListener("click", writePassword);
