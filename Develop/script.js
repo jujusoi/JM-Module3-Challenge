@@ -1,12 +1,4 @@
-// Assignment code here
-//when button click to generate password, presented with window.prompts for criteria
-// 1. length of password. number input between 8 or 128
-// 2. lowercase
-// 3. uppercase
-// 4. numbers
-// 5. special characters
-//atleast one of above should be in the password
-//when all prompts answered, then display on page. 
+
 var capLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
@@ -16,7 +8,7 @@ console.log(letters);
 console.log(numbers);
 console.log(specialCharacters);
 console.log(capLetters);
-// Get references to the #generate element
+
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
@@ -80,7 +72,15 @@ function writePassword() {
         var spliceValue = shuffledPassword.length - passWordLength
         var finalPassword = shuffledPassword.splice(spliceValue);
         console.log(finalPassword);
-
+        var stringPass = finalPassword.toString();
+        var splitComma = stringPass.replaceAll(",", "");
+        console.log(splitComma);
+        displayPassword(splitComma);
+      }
+      function displayPassword(examplePass) {
+        var textArea = document.body.querySelector("#password");
+        console.log(textArea);
+        textArea.textContent = examplePass;
       }
       }
     }
@@ -88,19 +88,6 @@ function writePassword() {
   }
  }
  }  else { return
- }
-
-
-
- function randomLetter(letters) {
-  var max = letters.length;
-  var index = Math.floor(Math.random() * max);
-  return letters[index];
- }
- function randomCaps(capLetters) {
-  var max = capLetters.length;
-  var index = Math.floor(Math.random() * max);
-  return capLetters[index];
  }
 
   var password = generatePassword();
