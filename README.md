@@ -43,4 +43,4 @@ Password written onto page.
 ## Link
 
 GitHub: https://github.com/jujusoi/JM-Module3-Challenge
-GitHub Pages: 
+GitHub Pages: https://jujusoi.github.io/JM-Module3-Challenge/
