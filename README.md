@@ -41,3 +41,6 @@ Password written onto page.
 ![Functionality](./readmeimages/functionality.mp4)
 
 ## Link
+
+GitHub: https://github.com/jujusoi/JM-Module3-Challenge
+GitHub Pages: 
