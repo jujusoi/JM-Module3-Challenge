@@ -42,5 +42,5 @@ Password written onto page.
 
 ## Link
 
-GitHub: https://github.com/jujusoi/JM-Module3-Challenge
-GitHub Pages: https://jujusoi.github.io/JM-Module3-Challenge/
+GitHub: https://github.com/jujusoi/JM-Password-Generator
+GitHub Pages: https://jujusoi.github.io/JM-Password-Generator
